@@ -3,10 +3,8 @@ namespace App;
 
 use \Illuminate\Database\Eloquent\Model;
  
-class User extends Model {
-    protected $table = 'users';
-
-
+class Usuario extends Model {
+    protected $table = 'usuarios';
     /**
      * The attributes that are mass assignable.
      *

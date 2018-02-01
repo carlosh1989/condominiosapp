@@ -1,3 +1,3 @@
 
-s/${model}/Marca/
-s/${tabla}/marcas/
+s/${model}/CondominioImagen/
+s/${tabla}/condominios_imagenes/

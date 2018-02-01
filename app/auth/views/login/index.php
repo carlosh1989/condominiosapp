@@ -11,7 +11,7 @@
 <div class="col s12">
            <div class='input-field'>
           <input class='validate' type='text' name='username' id='email' />
-          <label for='email'><i class="fa fa-user fa-2x"></i> USUARIO</label>
+          <label for='email'><i class="fa fa-user fa-2x"></i> EMAIL</label>
         </div>
 
 
@@ -29,7 +29,7 @@
       
       </div>
       <div class="col s4">
-        <button type='submit' name='btn_login' class='col s12 m12 btn btn-large waves-effect red'><i class="fa fa-external-link-square" aria-hidden="true"></i>
+        <button type='submit' name='btn_login' class='col s12 m12 btn btn-large waves-effect green'><i class="fa fa-external-link-square" aria-hidden="true"></i>
         ENTRAR</button>
       </div>
 

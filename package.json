@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "blazy": "^1.8.2",
+    "bootstrap-switch": "^3.3.4",
     "bootstrap-tagsinput": "*",
     "jquery-paginate": "*"
   }

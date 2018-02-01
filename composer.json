@@ -28,7 +28,8 @@
         "windwalker/edge": "^3.2",
         "dompdf/dompdf":"*",
         "google/recaptcha": "~1.1",
-        "league/geotools": "@stable"
+        "league/geotools": "@stable",
+        "cloudinary/cloudinary_php": "dev-master"
     },
     "autoload": {
         "psr-0": {

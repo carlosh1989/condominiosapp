@@ -1,4 +1,4 @@
 
-s/${modulo}/municipal/
-s/${controller}/VotosCentroMesa/
+s/${modulo}/admin/
+s/${controller}/Condominios/
 s/${vista}/show/

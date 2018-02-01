@@ -38,56 +38,8 @@ class Login
 	        View::ver('auth/login/index');
 	    }
     }
-    /*
-    public function verificar()
-    {
-		$recaptcha = new \ReCaptcha\ReCaptcha('6Lf0ETMUAAAAAB6BNOrkmuZfQpXNQgjpySrmJl3Z');
-    	$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-		if ($resp->isSuccess()) {
-				extract($_POST);
-				$usuario = Usuario::where('email',$username)->first();
-				if($usuario)
-				{
-					$iguales = password_verify($password, $usuario->password);
-					if($iguales)
-					{
-			            $session = new Session();
-			            // You can define what you like to be stored.
-			            $user = array(
-			                'id'	=> $usuario->id,
-			                'name'  => $usuario->name,
-			                'email' => $usuario->email,
-			                'role'		=> $usuario->role,
-			                'id_instituciones'=> $usuario->id_instituciones,
-			                'id_control' => $usuario->id_control,
-			                'id_municipio' => $usuario->id_municipio,
-			                'id_parroquia' => $usuario->id_parroquia,
-			                'estatus' => $usuario->estatus,
-			            );
+    
 
-			           	$session->register(10); // Register for 2 hours.
-			            $session->set(sessionNameDefault, $user);
-			            $_SESSION['nombre_usuario'] = $usuario->name;
-			            //header('location: '.baseUrl.'admin/pensionados');
-			            Redirect::to('auth/login/index');
-					}
-					else
-					{
-			            Redirect::send('auth/login','error','Contraseña incorrecta.');
-					}
-				}
-				else
-				{
-		            Redirect::send('auth/login','error','Usuario incorrecto.');
-				}
-				//Arr::show($usuario);
-		} 
-		else 
-		{
-		    Redirect::send('auth/login','error','CAPTCHA requerido.');
-		}
-    }
-*/
     public function verificar()
     {
 
@@ -136,7 +88,7 @@ class Login
 
     public function clave()
     {
-		$password = password_hash('oda*18', PASSWORD_DEFAULT);
+		$password = password_hash('123', PASSWORD_DEFAULT);
 		echo $password;
 	}
 

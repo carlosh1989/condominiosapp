@@ -252,7 +252,7 @@
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a style="color: #444;font-size: 1.3em" href="sass.html">Sobre nosotros</a></li>
                         <li><a style="color: #444;font-size: 1.3em" href="sass.html">Misión Visión</a></li>
-                        <li><a style="color: #444;font-size: 1.3em" href="badges.html">Login</a></li>
+                        <li><a style="color: #444;font-size: 1.3em" href="<?php echo baseUrl ?>auth/login">Login</a></li>
                     </ul>
                 </div>
 

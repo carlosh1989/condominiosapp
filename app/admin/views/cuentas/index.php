@@ -1,3 +1,4 @@
+
 <div id="panel" class="panel panel-primary">
   <div class="panel-heading" style="background-color: red">
     <h3 class="panel-title text-muted"><i class="fa fa-users fa-2x"></i> CUENTAS<b></b>
@@ -9,14 +10,14 @@
         <thead>
           <tr class="">
             <th>ID</th>
-            <th width="" class="text-uppercase">Nombre</th>
-            <th width="" class="text-uppercase">Role</th>
-            <th width="" class="text-uppercase">Municipio</th>
-            <th width="" class="text-uppercase">Parroquia</th>
-            <th width="" class="text-uppercase">Organismo</th>
-            <th width="" class="text-uppercase">Usuario</th>
-            <th width="" class="text-uppercase">Creado</th>
-            <th width="" class="text-uppercase">Centro</th>
+            <th width="" style="color: #444;" class="text-uppercase">Nombre</th>
+            <th width="" style="color: #444;" class="text-uppercase">Role</th>
+            <th width="" style="color: #444;" class="text-uppercase">Municipio</th>
+            <th width="" style="color: #444;" class="text-uppercase">Parroquia</th>
+            <th width="" style="color: #444;" class="text-uppercase">Organismo</th>
+            <th width="" style="color: #444;" class="text-uppercase">Usuario</th>
+            <th width="" style="color: #444;" class="text-uppercase">Creado</th>
+            <th width="" style="color: #444;" class="text-uppercase">Centro</th>
           </tr>
         </thead>
         <tbody>

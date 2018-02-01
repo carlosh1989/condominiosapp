@@ -87,14 +87,14 @@
                 <div class="col-sm-3 col-lg-2">
                     <nav class="navbar navbar-default navbar-fixed-side">
                         <div class="container">
-                            <div style="background-color: red" class="navbar-header text-white">
+                            <div style="background-color: #2196F3" class="navbar-header text-white">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 </button>
-                                <a href="<?php echo baseUrl ?>" style="color:#fff;height: 73px;" class="navbar-brand text-white" href="#">
+                                <a href="<?php echo baseUrlRole() ?>Principal" style="color:#fff;height: 73px;" class="navbar-brand text-white" href="#">
                                     <!-- <img style="width: 47px;" id="profile-img" class="profile-img-card" src="" /> --><i class="fa fa fa-users fa-2x"></i> ADMIN</a>
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
@@ -105,39 +105,13 @@
                                             ?>
                                         </a>
                                         <ul class="nav collapse" id="opcionesMenu" role="menu" aria-labelledby="btn-1">
-                                            <li><a class="text-danger" href="<?php echo baseUrlRole() ?>cuentas"><i class="fa fa-users"></i> Cuentas</a></li>
-                                            <li><a class="text-danger" href="<?php echo baseUrl ?>auth/login/logout"><i class="fa fa-power-off"></i> Salir</a></li>
+                                            <li><a href="<?php echo baseUrl ?>auth/login/logout"><i class="fa fa-power-off"></i> Salir</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                                 <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>cuentasMunicipales"><i class="fa fa-map"></i> MUNICIPALES</a></li>
+                                    <li class=""><a href="<?php echo baseUrlRole() ?>Condominios"><i class="fa fa-sitemap"></i> CONDOMINIOS</a></li>
                                 </ul>
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>estructuras"><i class="fa fa-sitemap"></i> ESTRUCTURA</a></li>
-                                </ul>
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>partidos"><i class="fa fa-handshake-o"></i> PARTIDOS</a></li>
-                                </ul>
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>instituciones"><i class="fa fa-building-o"></i> INSTITUCIONES</a></li>
-                                </ul>
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>centrosAdmin"><i class="fa fa-university"></i> CENTROS</a></li>
-                                </ul>
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>estadisticas"><i class="fa fa-area-chart"></i> ESTADISTICAS</a></li>
-                                </ul>
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a class="text-uppercase" href="#" id="" data-toggle="collapse" data-target="#opcionesMenuReportes" aria-expanded="false"><i class="fa fa-file-pdf-o"></i> REPORTES</a>
-                                    <ul class="nav collapse" id="opcionesMenuReportes" role="menu" aria-labelledby="btn-1">
-                                        <li><a class="text-danger" href="<?php echo baseUrlRole() ?>reportes/clp">
-                                            <i class="fa fa-university"></i> CLP</a></li>
-                                        <li><a class="text-danger" href="<?php echo baseUrlRole() ?>reportes/ubch">
-                                            <i class="fa fa-podcast"></i> UBCH</a></li>
-                                        <li><a class="text-danger" href="<?php echo baseUrlRole() ?>reportes/patrullero">
-                                            <i class="fa fa-universal-access"></i> PATRULLERO</a></li>
-                                    </ul>
                                 </li>
                             </ul>
                         </div>
