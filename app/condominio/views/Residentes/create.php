@@ -49,7 +49,7 @@ $("#MesasSelect").html(data);
           $( document ).ready(function() {
           $('.datepicker').pickadate({
           // Escape any “rule” characters with an exclamation mark (!).
-          format: 'dd mmm, yyyy',
+          format: 'dd/mm/yyyy',
           formatSubmit: 'yyyy/mm/dd',
           hiddenPrefix: 'prefix__',
           hiddenSuffix: '__suffix',
@@ -60,12 +60,13 @@ $("#MesasSelect").html(data);
           });
           </script>
         </div>
-      </div>
-      <br>
-      <div class="row">
         <div class="col-lg-3">
           <input class="form-control" type="text" name="num_casa" placeholder="NUM. CASA" required>
         </div>
+      </div>
+      <br>
+      <div class="row">
+
      
         <script>
         /* script */

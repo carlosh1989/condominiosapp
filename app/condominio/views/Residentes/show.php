@@ -30,12 +30,22 @@
                   <td class="text-uppercase" style="background: #E9E9E9;"><b><i class="fa fa-calendar" data-inputmask="'alias': '99/99/9999'"></i> Fecha nacimientio:</b></td>
                   <td class="text-uppercase"><?php echo $residente->fecha_nacimiento ?></td>
                 </tr>
-
+                <tr>
+                  <td class="text-uppercase" style="background: #E9E9E9;"><b><i class="fa fa-calendar" data-inputmask="'alias': '99/99/9999'"></i> Edad:</b></td>
+                  <td class="text-uppercase">
+                  <?php 
+                  list($dia,$mes,$ano) = explode('/', $residente->fecha_nacimiento);
+                  ?>
+                  <?php
+                  use Carbon\Carbon;
+                   $edad = Carbon::createFromDate($ano, $mes, $dia)->diff(Carbon::now())->format('%y'); ?>
+                  <?php echo $edad ?>
+                  </td>
+                </tr>
                 <tr>
                   <td class="text-uppercase" style="background: #E9E9E9;"><b><i class="fa fa-desc"></i>Num. casa:</b></td>
                   <td class="text-uppercase"><?php echo $residente->num_casa ?></td>
                 </tr>
-
               </tbody>
             </table>
           </div>
