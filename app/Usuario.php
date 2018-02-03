@@ -1,6 +1,7 @@
 <?php 
 namespace App;
 
+use App\Condominio;
 use \Illuminate\Database\Eloquent\Model;
  
 class Usuario extends Model {
@@ -27,5 +28,18 @@ class Usuario extends Model {
     {
         return $this->hasOne(Locatario::class, 'user_id', 'id');
     }
+
+    public function condominio()
+    {
+        return $this->hasOne(Condominio::class, 'usuarios_id', 'id');
+    }
+
+    public function residente()
+    {
+        return $this->hasOne(Residente::class, 'usuarios_id', 'id');
+    }
 }
+
+
+
 

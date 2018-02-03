@@ -8,10 +8,11 @@
       <table class="table table-striped table-condensed animated fadeIn" data-striped="true">
         <thead>
           <tr class="">
-            <th>ID</th>
+            <th style="color: #444;">ID</th>
             <th width="" style="color: #444;" class="text-uppercase">Nombre</th>
             <th width="" style="color: #444;" class="text-uppercase">Role</th>
             <th width="" style="color: #444;" class="text-uppercase">Usuario</th>
+            <th width="" style="color: #444;" class="text-uppercase">Ver</th>
           </tr>
         </thead>
         <tbody>
@@ -21,6 +22,9 @@
             <td class="text-uppercase"><?php echo $u->name ?></td>
             <td class="text-uppercase"><?php echo $u->role ?></td>
             <td class="text-uppercase"><?php echo $u->email ?></td>
+            <td class="text-uppercase">
+            <a class="fa fa-search" href="<?php echo baseUrlRole() ?>Condominios/<?php echo $u->condominio->id ?>"></a>
+            </td>
           </tr>
           <?php endforeach ?>
         </tbody>

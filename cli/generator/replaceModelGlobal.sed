@@ -1,3 +1,3 @@
 
-s/${model}/CondominioImagen/
-s/${tabla}/condominios_imagenes/
+s/${model}/ResidenteImagen/
+s/${tabla}/residentes_imagenes/

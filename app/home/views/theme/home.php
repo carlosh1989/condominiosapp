@@ -227,6 +227,10 @@
         background-size: 100% 2px;
         }
         }
+
+
+
+
         </style>
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -259,6 +263,35 @@
             </nav>
         </div>
         <?php echo $content ?>
+          <footer class = "page-footer blue-grey lighten-5">
+    <div class = "row">
+      <div class = "col s12 m3 l3 offset-m1 offset-l1">
+        <h5 class = "red-text">TUCONDOMINIO.COM</h5>
+        <p>Somos tu servicio para la administracion de condominios y/o pagos de servicios de diversas indoles (Residenciales, Centros Comerciales, etc).
+        Es la herramienta ideal para juntas de condominios autoaministradas o empresas de servicios administrativos.</p>
+      </div>
+      <div class = "col s12 m3 l3 offset-m1 offset-l1">
+        <h5 class = "red-text">DIRECCION</h5>
+        <p>Open Sistem, Inc <br>
+          AV, Adonay Parra <br>
+        Univ Santa Maria Barinas</p>
+      </div>
+      <div class = "col s12 m4 l4">
+        <h5 class = "red-text">CONTACTO</h5>
+        <p>Phone: +1 (52) 2215-251 <br>
+          Fax: +1 (22) 5138-219 <br>
+        info@laborator.al</p>
+      </div>
+      
+
+    </div>
+    
+    <div class = "footer-copyright green">
+      <div class = "container center">
+      TUCONDOMINIO.COM 2016 
+      </div>
+    </div>
+  </footer>
         <script>
         $(window).on('load', function() { // makes sure the whole site is loaded
         //$('#status').fadeOut(); // will first fade out the loading animation

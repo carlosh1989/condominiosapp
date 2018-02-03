@@ -15,7 +15,7 @@ class Condominios
 
     public function index()
     {
-        $usuarios = Usuario::all();
+        $usuarios = Usuario::where('role','condominio')->get();
         View(compact('usuarios'));
     }
 
@@ -86,7 +86,9 @@ class Condominios
 
     public function show($id)
     {
-
+        $condominio = Condominio::find($id);
+        //Arr($condominio);
+        View(compact('condominio'));
     }
 
     public function edit($id)

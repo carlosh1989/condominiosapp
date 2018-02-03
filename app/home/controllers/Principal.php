@@ -1,6 +1,7 @@
 <?php
 namespace App\home\controllers;
 
+use App\Condominio;
 use App\Donante;
 use App\Entrega;
 use App\Laboratorio;
@@ -22,19 +23,15 @@ class Principal extends Controller
 
     public function index()
     {
-/*        if(Session::isRegistered())
-        {
-            Redirect::to('auth/login');
-        }
-        else
-        {
-            $entregas = Entrega::where('portada',1)->get();
-            //Arr($entregas);
-            //View::ver('home/principal/index',compact('entregas')); 
-            View(compact('entregas')); 
-        }*/
+        $condominios = Condominio::all();
+        View(compact('condominios'));
+    }
 
-        View();
+    public function show()
+    {
+        $id = Uri(5);
+        $condominio = Condominio::find($id);
+        View::ver('home/principal/show',compact('condominio'));
     }
 
     public function consulta()

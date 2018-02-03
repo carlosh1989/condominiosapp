@@ -77,7 +77,21 @@
     position: absolute;
     }
     
-    
+      .flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
     </style>
     <div class="slider">
       <ul class="slides">
@@ -103,27 +117,28 @@
     </div>
   </div>
   <style type="text/css">
-  .card-image{
-  height: 200px; /* Your height here */
-  overflow: hidden;
-  }
+
   </style>
-  <div class="row">
     <h5 class="grey-text center">CONDOMINIOS ADSCRITOS</h5>
+  <div class="row flex-container">
+
+    <?php foreach ($condominios as $c): ?>
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
-          <img src="<?php echo baseUrl ?>assets/img/residencia/1.jpg">
+          <img src="<?php echo $c->imagen->imagen_medio ?>">
         </div>
         <div class="card-content">
-          <h5 class="green-text">Alto Barinas Sur</h5>
-          <p class="grey-text">Sur de Barinas</p>
+          <h5 class="green-text"><?php echo $c->nombre ?></h5>
+          <p class="grey-text"><?php echo $c->direccion ?></p>
         </div>
         <div class="card-action">
-          <a class="red-text" href="#">Detalles <i class="fa fa-search"></i></a>
+          <a class="red-text" href="<?php echo baseUrl ?>">Detalles <i class="fa fa-search"></i></a>
         </div>
       </div>
-    </div>
+    </div> 
+    <?php endforeach ?>
+
     <div class="col s12 m4 l4">
       <div class="card">
         <div class="card-image">
@@ -195,33 +210,4 @@
       </div>
     </div>
   </div>
-  <footer class = "page-footer blue-grey lighten-5">
-    <div class = "row">
-      <div class = "col s12 m3 l3 offset-m1 offset-l1">
-        <h5 class = "red-text">TUCONDOMINIO.COM</h5>
-        <p>Somos tu servicio para la administracion de condominios y/o pagos de servicios de diversas indoles (Residenciales, Centros Comerciales, etc).
-        Es la herramienta ideal para juntas de condominios autoaministradas o empresas de servicios administrativos.</p>
-      </div>
-      <div class = "col s12 m3 l3 offset-m1 offset-l1">
-        <h5 class = "red-text">DIRECCION</h5>
-        <p>Open Sistem, Inc <br>
-          AV, Adonay Parra <br>
-        Univ Santa Maria Barinas</p>
-      </div>
-      <div class = "col s12 m4 l4">
-        <h5 class = "red-text">CONTACTO</h5>
-        <p>Phone: +1 (52) 2215-251 <br>
-          Fax: +1 (22) 5138-219 <br>
-        info@laborator.al</p>
-      </div>
-      
-
-    </div>
-    
-    <div class = "footer-copyright green">
-      <div class = "container center">
-      TUCONDOMINIO.COM 2016 
-      </div>
-    </div>
-  </footer>
 </div>
