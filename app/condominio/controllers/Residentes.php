@@ -14,9 +14,12 @@ class Residentes
 
     public function index()
     {
-        $usuarios = Usuario::where('role','residente')->get();;
-        //Arr($usuarios);
-        View(compact('usuarios'));
+        $user = User();
+        $condominio_id = Usuario::find($user['id'])->condominio->id;
+
+        $residentes = Residente::where('condominios_id',$condominio_id)->get();
+        //Arr($residentes);
+        View(compact('residentes'));
     }
 
     public function create()
@@ -31,6 +34,7 @@ class Residentes
         extract($_POST);
         //Arr($_POST);
 
+
         //creando usuario de condominio
         $usuario = new Usuario;
         $usuario->name = $nombre;
@@ -41,9 +45,13 @@ class Residentes
         $usuario->updated_at = date('Y-m-d H:i:s');
         $usuario->save();
 
+        //ID de condominio
+        $user = User();
+        $condominio_id = Usuario::find($user['id'])->condominio->id;
 
         $residente = new Residente;
         $residente->usuarios_id = $usuario->id;
+        $residente->condominios_id = $condominio_id;
         $residente->nombre = $nombre;
         $residente->cedula = $cedula;
         $residente->fecha_nacimiento = $fecha_nacimiento;

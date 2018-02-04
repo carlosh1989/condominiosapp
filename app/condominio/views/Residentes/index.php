@@ -10,27 +10,25 @@
           <tr class="">
             <th style="color: #444;">ID</th>
             <th width="" style="color: #444;" class="text-uppercase">Nombre</th>
-            <th width="" style="color: #444;" class="text-uppercase">Role</th>
-            <th width="" style="color: #444;" class="text-uppercase">Usuario</th>
-            <th width="" style="color: #444;" class="text-uppercase">Ver</th>
+            <th width="" style="color: #444;" class="text-uppercase">N° Casa</th>
+            <th width="5%" style="color: #444;" class="text-uppercase">Ver</th>
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($usuarios as $key => $u): ?>
+          <?php foreach ($residentes as $key => $u): ?>
           <tr>
             <td class="text-uppercase"><?php echo $u->id ?></td>
-            <td class="text-uppercase"><?php echo $u->name ?></td>
-            <td class="text-uppercase"><?php echo $u->role ?></td>
-            <td class="text-uppercase"><?php echo $u->email ?></td>
-            <td class="text-uppercase">
-            <a class="fa fa-search" href="<?php echo baseUrlRole() ?>Residentes/<?php echo $u->residente->id ?>"></a>
+            <td class="text-uppercase"><?php echo $u->nombre ?></td>
+            <td class="text-uppercase"><?php echo $u->num_casa ?></td>
+            <td style="text-align: center;" class="text-uppercase">
+            <a class="fa fa-search" href="<?php echo baseUrlRole() ?>Residentes/<?php echo $u->id ?>"></a>
             </td>
           </tr>
           <?php endforeach ?>
         </tbody>
       </table>
       <div class="text-center">
-        <?php echo Paginator($usuarios); ?>
+        <?php echo Paginator($residentes); ?>
       </div>
     </div>
   </div>
