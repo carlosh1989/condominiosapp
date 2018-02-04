@@ -1,3 +1,3 @@
 
-s/${model}/CondominioCobro/
-s/${tabla}/condominios_cobros/
+s/${model}/ResidentePago/
+s/${tabla}/residentes_pagos/

@@ -115,6 +115,9 @@
                                 <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Servicios"><i class="fa fa-file-o"></i> SERVICIOS</a></li>
                                 </ul>
+                                <ul class="nav navbar-nav">
+                                    <li class=""><a href="<?php echo baseUrlRole() ?>Cobros"><i class="fa fa-credit-card"></i> COBROS</a></li>
+                                </ul>
                                 </li>
                             </ul>
                         </div>

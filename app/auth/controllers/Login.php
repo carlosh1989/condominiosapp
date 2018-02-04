@@ -57,19 +57,11 @@ class Login
 			                'name'  => $usuario->name,
 			                'email' => $usuario->email,
 			                'role'		=> $usuario->role,
-			                'id_instituciones'=> $usuario->id_instituciones,
-			                'id_control' => $usuario->id_control,
-			                'id_municipio' => $usuario->id_municipio,
-			                'id_parroquia' => $usuario->id_parroquia,
-			                'id_municipal' => $usuario->id_municipal,
-			                'id_ubch' => $usuario->id_ubch,
-			                'id_clp' => $usuario->id_clp,
-			                'estatus' => $usuario->estatus,
-			                'id_patrullero' => $usuario->id_patrullero,
+			                'condominios_id' => $usuario->condominios_id
 			            );
 
 			           	$session->register(10); // Register for 2 hours.
-			            $session->set(sessionNameDefault, $user);
+			            $session->set(sessionNameDefault, $usuario);
 			            $_SESSION['nombre_usuario'] = $usuario->name;
 			            //header('location: '.baseUrl.'admin/pensionados');
 			            Redirect::to('auth/login/index');

@@ -20,9 +20,7 @@ class Usuario extends Model {
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $hidden = array('password');
 
     public function locatario()
     {

@@ -27,10 +27,11 @@ class Condominios
     public function store()
     {
         extract($_POST);
-        Arr($_POST);
+        //Arr($_POST);
 
         //creando usuario de condominio
         $usuario = new Usuario;
+        $usuario->condominios_id = 0;
         $usuario->name = $name;
         $usuario->email = $email;
         $usuario->password = password_hash($password, PASSWORD_DEFAULT);
@@ -59,6 +60,9 @@ class Condominios
         $condominio->cancha = $cancha;
         $condominio->estacionamiento = $estacionamiento;
         $condominio->save();
+
+        $usuario->condominios_id = $condominio->id;
+        $usuario->save();
 
         \Cloudinary::config(array( 
         "cloud_name" => "tuconsultaenlinea", 
