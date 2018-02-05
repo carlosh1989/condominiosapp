@@ -14,8 +14,7 @@ class Servicios
     public function index()
     {
         $user = User();
-        $condominio_id = Usuario::find($user['id'])->condominio->id;
-        $servicios = Servicio::where('condominios_id',$condominio_id)->get();
+        $servicios = Servicio::where('condominios_id',$user['condominios_id'])->get();
         View(compact('servicios'));
     }
 

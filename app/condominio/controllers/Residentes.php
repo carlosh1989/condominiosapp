@@ -15,9 +15,7 @@ class Residentes
     public function index()
     {
         $user = User();
-        $condominio_id = Usuario::find($user['id'])->condominio->id;
-
-        $residentes = Residente::where('condominios_id',$condominio_id)->get();
+        $residentes = Residente::where('condominios_id',$user['condominios_id'])->get();
         //Arr($residentes);
         View(compact('residentes'));
     }
