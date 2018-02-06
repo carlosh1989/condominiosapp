@@ -1,0 +1,28 @@
+residentes_pagos
+
+
+id_detalle  -> id 
+
+id_codigo_cliente -> residentes_id
+
+numero_referencia -> radom
+
+id_concepto -> condominios_cobros_id
+
+mes año facturacion -> automatico con Carbon::now();
+
+monto_pagar -> input -> usuario ( este monto se resta a lel monto general de  condominios_cobros)
+
+monto_diferencia (puntos) -> de haber diferencia se hace un registro nuevo en la nueva tabla "resientes_puntos"
+
+en_espera 
+
+estatus -> 1 esperar 2 confirmado 3 denegado
+
+observaciones -> ( lo ingresa el administrador del condominio)
+
+------------------------------------------------------------------
+
+residentes_pagos_imagenes
+
+

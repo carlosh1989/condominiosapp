@@ -31,7 +31,9 @@ class Residentes
 
         extract($_POST);
         //Arr($_POST);
-
+        //ID de condominio
+        $user = User();
+        $condominio_id = Usuario::find($user['id'])->condominio->id;
 
         //creando usuario de condominio
         $usuario = new Usuario;
@@ -39,13 +41,10 @@ class Residentes
         $usuario->email = $email;
         $usuario->password = password_hash($password, PASSWORD_DEFAULT);
         $usuario->role = 'residente';
+        $usuario->condominios_id = $condominio_id;
         $usuario->created_at = date('Y-m-d H:i:s');
         $usuario->updated_at = date('Y-m-d H:i:s');
         $usuario->save();
-
-        //ID de condominio
-        $user = User();
-        $condominio_id = Usuario::find($user['id'])->condominio->id;
 
         $residente = new Residente;
         $residente->usuarios_id = $usuario->id;
