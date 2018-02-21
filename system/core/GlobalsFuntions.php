@@ -90,6 +90,16 @@ function Uri($num)
 	return \System\tools\url\Url::uri($num);
 }
 
+function ArrSendUrl($arr)
+{
+    return \System\tools\method\Data::ArrUrlSend($arr);
+}
+
+function ArrGetUrl($arr)
+{
+    return \System\tools\method\Data::ArrUrlGet($arr);
+}
+
 function Token()
 {
     return Token::field();

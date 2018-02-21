@@ -278,9 +278,9 @@
       </div>
       <div class = "col s12 m4 l4">
         <h5 class = "red-text">CONTACTO</h5>
-        <p>Phone: +1 (52) 2215-251 <br>
-          Fax: +1 (22) 5138-219 <br>
-        info@laborator.al</p>
+        <p>Phone: (+58) 414-534-7342 <br>
+          Fax:  (+58) 273-552-2392 <br>
+        OPENSISTEM@gmail.com</p>
       </div>
       
 

@@ -1,3 +1,3 @@
 
-s/${model}/Pago/
-s/${tabla}/residentes_pagos/
+s/${model}/Saldo/
+s/${tabla}/saldos/
