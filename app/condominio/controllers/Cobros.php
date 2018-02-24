@@ -90,4 +90,17 @@ class Cobros
 
         Success('Cobros/','Cobro notificado a residentes..!');
     }
+
+    public function residentes()
+    {
+        $pagos = ResidentePago::orderBy('id', 'desc')->get();
+        View(compact('pagos'));
+    }
+
+    public function residentes_servicio()
+    {
+        $cobro_id = Uri(5);
+        $pagos = ResidentePago::where('condominios_cobros_id',$cobro_id)->orderBy('id', 'desc')->get();
+        View(compact('pagos'));
+    }
 }

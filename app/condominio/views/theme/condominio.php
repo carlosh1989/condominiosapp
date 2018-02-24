@@ -118,28 +118,28 @@
                                 <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Cobros"><i class="fa fa-credit-card"></i> COBROS</a></li>
                                 </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--/.nav-collapse -->
+                            </li>
+                        </ul>
                     </div>
-                </nav>
-            </div>
-            
-            <div class="col-sm-9 col-lg-10">
-                <!-- <img width="100%" height="130px;" src="<?php echo baseUrl ?>/assets/img/banner.jpg" alt=""> -->
-                <br>
-                <?php echo $content ?>
-            </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+        
+        <div class="col-sm-9 col-lg-10">
+            <!-- <img width="100%" height="130px;" src="<?php echo baseUrl ?>/assets/img/banner.jpg" alt=""> -->
+            <br>
+            <?php echo $content ?>
         </div>
     </div>
-    <!-- /container -->
-    <!-- MENSAJES FLASH SWEET ALERT 2 -->
-    <?php if (Message::hasMessages()): ?>
-    <?php echo Message::show() ?>
-    <?php endif ?>
-    <?php if (Message::hasQuestion()): ?>
-    <?php echo Message::showQuestion() ?>
-    <?php endif ?>
+</div>
+<!-- /container -->
+<!-- MENSAJES FLASH SWEET ALERT 2 -->
+<?php if (Message::hasMessages()): ?>
+<?php echo Message::show() ?>
+<?php endif ?>
+<?php if (Message::hasQuestion()): ?>
+<?php echo Message::showQuestion() ?>
+<?php endif ?>
 </body>
 </html>

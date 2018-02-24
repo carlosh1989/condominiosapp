@@ -2,8 +2,8 @@
 namespace App;
 use \Illuminate\Database\Eloquent\Model;
  
-class Saldo extends Model {
-    protected $table = 'saldos';
+class ResidenteComprobanteImagen extends Model {
+    protected $table = 'residentes_comprobantes_imagenes';
 	public $timestamps = false;
     //Ejemplo de definir campos
     //protected $fillable = ['username','email','password'];

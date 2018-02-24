@@ -1,6 +1,6 @@
 <div id="panel" class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title text-muted"><i class="fa fa-credit-card fa-2x"></i> COBROS<b></b>
+    <h3 class="panel-title text-muted"><i class="fa fa-credit-card fa-2x"></i> COBROS DE SERVICIOS<b></b>
     <a class="btn btn-default pull-right" href="<?php echo baseUrlRole() ?>Cobros/create"><i class="fa fa-plus-square text-muted"></i><i style="color:#777;"> INGRESAR COBRO</i></a>    </h3>
   </div>
   <div class="panel-body">
@@ -26,7 +26,7 @@
               <?php if ($u->estatus == false): ?>
               <a class="btn btn-default" href="<?php echo baseUrlRole() ?>Cobros/notificar/<?php echo $u->id ?>"> <i class="fa fa-send"></i> Notificar</a>
               <?php else: ?>
-              <a class="btn btn-primary" href="<?php echo baseUrlRole() ?>Residentes/<?php echo $u->id ?>"> <i class="fa fa-search"></i> Ver pagos</a>
+              <a class="btn btn-primary" href="<?php echo baseUrlRole() ?>Cobros/residentes_servicio/<?php echo $u->id ?>"> <i class="fa fa-search"></i> Ver pagos</a>
               <?php endif ?>
             </td>
           </tr>

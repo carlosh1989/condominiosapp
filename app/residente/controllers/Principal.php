@@ -12,7 +12,7 @@ class Principal
 
     public function index()
     {
-        View();
+        Redirect::to('residente/ResidentesPagos');
     }
 
     public function create()

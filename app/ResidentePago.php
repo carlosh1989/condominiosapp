@@ -1,6 +1,7 @@
 <?php 
 namespace App;
 use App\CondominioCobro;
+use App\ResidenteComprobante;
 use \Illuminate\Database\Eloquent\Model;
  
 class ResidentePago extends Model {
@@ -14,5 +15,14 @@ class ResidentePago extends Model {
 	    return $this->belongsTo(CondominioCobro::class, 'condominios_cobros_id', 'id')->orderBy('id', 'desc');
 	}
 
+	public function residente()
+	{
+	    return $this->belongsTo(Residente::class, 'residentes_id', 'id')->orderBy('id', 'desc');
+	}
+
+	public function comprobante()
+	{
+	    return $this->belongsTo(ResidenteComprobante::class, 'residentes_comprobantes_id', 'id')->orderBy('id', 'desc');
+	}
 }
 

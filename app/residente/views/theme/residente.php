@@ -109,31 +109,42 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <ul class="nav navbar-nav">
-                                    <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos"><i class="fa fa-credit-card"></i> PAGOS PENDIENTES</a></li>
-                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a class="text-uppercase" href="#" id="" data-toggle="collapse" data-target="#pagos" aria-expanded="false"><i class="fa fa-credit-card"></i>
+                                        Pagos
+                                    </a>
+                                    <ul class="nav collapse" id="pagos" role="menu" aria-labelledby="btn-1">
+                                        <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos"> SERVICIOS POR PAGAR</a></li>
+                                        <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos/pagos"> PAGOS PROCESANDO</a></li>
+                                    </ul>
+
                                 </li>
                             </ul>
-                        </div>
-                        <!--/.nav-collapse -->
-                    </div>
-                </nav>
+<!--                             <ul class="nav navbar-nav">
+                                <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos"><i class="fa fa-credit-card"></i> PAGOS PENDIENTES</a></li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
-            
-            <div class="col-sm-9 col-lg-10">
-                <!-- <img width="100%" height="130px;" src="<?php echo baseUrl ?>/assets/img/banner.jpg" alt=""> -->
-                <br>
-                <?php echo $content ?>
-            </div>
-        </div>
+        </nav>
     </div>
-    <!-- /container -->
-    <!-- MENSAJES FLASH SWEET ALERT 2 -->
-    <?php if (Message::hasMessages()): ?>
-    <?php echo Message::show() ?>
-    <?php endif ?>
-    <?php if (Message::hasQuestion()): ?>
-    <?php echo Message::showQuestion() ?>
-    <?php endif ?>
+    
+    <div class="col-sm-9 col-lg-10">
+        <!-- <img width="100%" height="130px;" src="<?php echo baseUrl ?>/assets/img/banner.jpg" alt=""> -->
+        <br>
+        <?php echo $content ?>
+    </div>
+</div>
+</div>
+<!-- /container -->
+<!-- MENSAJES FLASH SWEET ALERT 2 -->
+<?php if (Message::hasMessages()): ?>
+<?php echo Message::show() ?>
+<?php endif ?>
+<?php if (Message::hasQuestion()): ?>
+<?php echo Message::showQuestion() ?>
+<?php endif ?>
 </body>
 </html>
