@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="box-body">
-          Vista <b>create</b> del mudulo <b>residente</b>
+          Vista <b>create</b> del mudulo <b>condominio</b>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">

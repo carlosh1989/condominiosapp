@@ -116,7 +116,7 @@
                                     <ul class="nav collapse" id="pagos" role="menu" aria-labelledby="btn-1">
                                         <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos"> SERVICIOS POR PAGAR</a></li>
                                         <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos/pagos"> PAGOS</a></li>
-                                        <li class=""><a href="<?php echo baseUrlRole() ?>CuentasBancarias"> CUENTAS BANCARIAS</a></li>
+                                        <li class=""><a href="<?php echo baseUrlRole() ?>ResidentesPagos/cuentas_bancos"> CUENTAS BANCARIAS</a></li>
                                     </ul>
 
                                 </li>

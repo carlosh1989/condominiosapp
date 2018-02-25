@@ -1,19 +1,27 @@
 <?php
-namespace App\residente\controllers;
+namespace App\condominio\controllers;
 
 use App\CuentaBanco;
 
 class CuentasBancarias
 {
-    public function __construct()
+    function __construct()
     {
-        Role('residente');
+        Role('condominio');
     }
 
     public function index()
     {
-        $bancos = CuentaBanco::all();
-        View(compact('bancos'));
+        if(User())
+        {
+            $bancos = CuentaBanco::where('condominios_id',User()->condominios_id)->get();
+            View(compact('bancos'));
+        }
+        else
+        {
+            Redirect::to('');
+        }
+        //View();
     }
 
     public function create()
@@ -23,10 +31,12 @@ class CuentasBancarias
 
     public function store()
     {
+
     }
 
     public function show($id)
     {
+
     }
 
     public function edit($id)
@@ -36,9 +46,11 @@ class CuentasBancarias
 
     public function update($id)
     {
+
     }
 
     public function destroy($id)
     {
+
     }
 }

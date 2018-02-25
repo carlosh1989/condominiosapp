@@ -7,6 +7,7 @@ use App\ResidenteComprobanteImagen;
 use App\ResidentePago;
 use App\Saldo;
 use App\Usuario;
+use Dompdf\Dompdf;
 use System\tools\rounting\Redirect;
 use System\tools\session\User;
 
@@ -24,7 +25,8 @@ class ResidentesPagos
         if ($user)
         {
             $pagos = ResidentePago::where('residentes_id', $user->residente->id)->where('estatus', 0)->orderBy('id', 'desc')->get();
-            View(compact('pagos'));
+            $saldo = Saldo::where('residentes_id',$user->residente->id)->first();
+            View(compact('pagos','saldo'));
         }
         else
         {
@@ -183,6 +185,27 @@ class ResidentesPagos
         $saldo->save();
 
         Success('ResidentesPagos','Pago realizado con su saldo plus.');
+    }
+
+    public function cuentas_bancos()
+    {
+        $bancos = CuentaBanco::all();
+        View(compact('bancos'));
+    }
+
+    public function comprobantePDF()
+    {
+        extract($_GET);
+        ob_start();
+        $u = ResidenteComprobante::find(17);
+        include('app/residente/views/ResidentesPagos/comprobantePDF.php');
+        $dompdf = new Dompdf(array('enable_remote' => true));
+        $baseUrl = baseUrl;
+        $dompdf->setBasePath($baseUrl); // This line resolve
+        $dompdf->loadHtml(ob_get_clean());
+        $dompdf->setPaper('letter', 'portrait');
+        $dompdf->render();
+        $dompdf->stream();
     }
 
     public function create()

@@ -5,6 +5,19 @@
   </div>
   <div class="panel-body">
     <div class="col-md-12 table-responsive">
+    <div style="font-size: 1.2em;" class="row">
+     <div class="col-lg-4">
+      <b><i class="fa fa-plus"></i> Saldo Plus:</b> <label class="text-muted">BsF.</label>
+      <?php if ($saldo): ?>
+        <label class="text-success">
+          <?php echo $saldo->monto_positivo ?>
+        </label>
+      <?php else: ?>
+        <label class="text-muted">0</label>
+      <?php endif ?>
+     </div>
+    </div>
+    <br>
       <form action="<?php echo baseUrlRole() ?>ResidentesPagos/total" method="POST">
         <?php echo Token::field() ?>
         <table class="table table-striped table-condensed animated fadeIn" data-striped="true">

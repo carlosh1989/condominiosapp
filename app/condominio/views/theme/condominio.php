@@ -121,6 +121,9 @@
                                 <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Pagos"><i class="fa fa-files-o"></i> Depositos/Transferencias</a></li>
                                 </ul>
+                                <ul class="nav navbar-nav">
+                                    <li class=""><a href="<?php echo baseUrlRole() ?>CuentasBancos"><i class="fa fa-building-o"></i> Cuentas Bancarias</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

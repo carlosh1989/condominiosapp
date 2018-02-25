@@ -45,11 +45,11 @@
                     <br>
                     <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->banco ?></label>
                     <br>
-                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->tipo ?></label>
+                    <b style="color: #444;">Tipo Cuenta: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->tipo ?></label>
                     <br>
-                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->numero ?></label>
+                    <b style="color: #444;">Número de cuenta: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->numero ?></label>
                     <br>
-                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->nombre ?></label>
+                    <b style="color: #444;">Beneficiario: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->nombre ?></label>
                     <br>
                     <b style="color: #444;">Email: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->email ?></label>
                   </div>
@@ -89,6 +89,7 @@
           <tr class="">
             <th width="" style="color: #444;" class="text-uppercase">Número de Referencia</th>
             <th width="" style="color: #444;" class="text-uppercase">Monto Total</th>
+            <th width="5%" style="color: #444;text-align: center;" class="text-uppercase">Comprobante</th>
             <th width="5%" style="color: #444;text-align: center;" class="text-uppercase">Estatus</th>
           </tr>
         </thead>
@@ -98,9 +99,12 @@
           <tr>
             <td class="text-uppercase">
               <!-- Trigger the modal with a button -->
-              <a style="cursor: pointer; " class="" data-toggle="modal" data-target="#servicio<?php echo $u->id ?>">#<?php echo $u->numero_referencia ?></a>
+              <a style="cursor: pointer;" data-toggle="modal" data-target="#servicio<?php echo $u->id ?>">#<?php echo $u->numero_referencia ?></a>
             </td>
             <td class="text-uppercase"><?php echo $u->monto_total ?></td>
+            <td style="text-align: center;font-size: 0.8em;">
+            <a class="btn btn-default fa fa-print fa-2x" href="<?php echo baseUrlRole() ?>ResidentesPagos/comprobantePDF"></a>
+            </td>
             <td style="text-align: center;" class="text-uppercase">
               <?php if ($u->estatus === 2): ?>
               <button class="btn btn-danger"><i class="fa fa-times-circle"></i></button>

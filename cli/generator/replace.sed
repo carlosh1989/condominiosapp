@@ -1,4 +1,4 @@
 
-s/${modulo}/residente/
+s/${modulo}/condominio/
 s/${controller}/CuentasBancarias/
 s/${vista}/show/

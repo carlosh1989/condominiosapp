@@ -13,7 +13,7 @@ class CuentasBancos
 
     public function index()
     {
-        $cuentas_banco = CuentaBanco::all();
+        $cuentas_banco = CuentaBanco::where('eliminar',0)->get();
         //Arr($formas_pagos);
         View(compact('cuentas_banco'));
     }
@@ -39,6 +39,7 @@ class CuentasBancos
         $bancoCuenta->nombre = $nombre;
         $bancoCuenta->cedula = $cedula;
         $bancoCuenta->email = $email;
+        $bancoCuenta->eliminar = 0;
         $bancoCuenta->save();
 
         //Arr($_POST);
@@ -62,6 +63,10 @@ class CuentasBancos
 
     public function destroy($id)
     {
+        $banco = CuentaBanco::find($id);
+        $banco->eliminar = 1;
+        $banco->save();
 
+        Success('CuentasBancos','Datos de Banco borrado.');
     }
 }
