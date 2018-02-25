@@ -18,7 +18,7 @@ class Cobros
     public function index()
     {
         $user = User();
-        $cobros = CondominioCobro::where('condominios_id', $user['condominios_id'])->get();
+        $cobros = CondominioCobro::where('condominios_id', $user['condominios_id'])->orderBy('id', 'desc')->get();
         View(compact('cobros'));
     }
 

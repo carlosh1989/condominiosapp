@@ -118,6 +118,9 @@
                                 <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Cobros"><i class="fa fa-credit-card"></i> COBROS</a></li>
                                 </ul>
+                                <ul class="nav navbar-nav">
+                                    <li class=""><a href="<?php echo baseUrlRole() ?>Pagos"><i class="fa fa-files-o"></i> Depositos/Transferencias</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

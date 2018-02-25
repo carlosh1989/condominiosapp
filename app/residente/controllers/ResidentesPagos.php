@@ -1,6 +1,7 @@
 <?php
 namespace App\residente\controllers;
 
+use App\CuentaBanco;
 use App\ResidenteComprobante;
 use App\ResidenteComprobanteImagen;
 use App\ResidentePago;
@@ -90,7 +91,9 @@ class ResidentesPagos
                 $saldo = Saldo::where('residentes_id', $residente_id)->first();
                 $total = $monto;
 
-                View(compact('total', 'checkboxvar', 'ser', 'saldo'));
+                $bancos = CuentaBanco::where('condominios_id', $pago->condominios_id)->get();
+
+                View(compact('total', 'checkboxvar', 'ser', 'saldo', 'bancos'));
             }
             else
             {
@@ -115,9 +118,10 @@ class ResidentesPagos
         $comprobante = new ResidenteComprobante;
         $comprobante->condominios_id = $pago->condominios_id;
         $comprobante->residentes_id = $pago->residentes_id;
+        $comprobante->cuentas_bancos_id = $banco_id;
         //guardamos los servicios de forma serializada para que esten en un solo campo
         $comprobante->servicios = $servicio_array;
-        $comprobante->servicios = $numero_referencia;
+        $comprobante->numero_referencia = $numero_referencia;
         $comprobante->monto_total = $monto_total;
         $comprobante->monto_comprobante = 0;
         $comprobante->fecha = $fecha_deposito;
@@ -156,7 +160,29 @@ class ResidentesPagos
         $imagen->imagen_miniatura = $imagen_miniatura['url'];
         $imagen->save();
 
-        echo "exito!!";
+        Success('ResidentesPagos/pagos', 'Comprobante subido, espere mientras se confirma.');
+    }
+
+    public function pago_plus()
+    {
+        //Arr($_POST);
+        extract($_POST);
+        $servicios = ArrGetUrl($servicios);
+        //Arr($servicios);
+
+        foreach ($servicios as $key => $s)
+        {
+            $servicioPago = ResidentePago::find($s);
+            $servicioPago->estatus = 2;
+            $servicioPago->save();
+        }
+
+        $saldo = Saldo::where('residentes_id',$servicioPago->residentes_id)->first();
+        $monto_resultado = $saldo->monto_positivo - $monto_total;
+        $saldo->monto_positivo = $monto_resultado;
+        $saldo->save();
+
+        Success('ResidentesPagos','Pago realizado con su saldo plus.');
     }
 
     public function create()

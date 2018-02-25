@@ -65,6 +65,13 @@
                 });
                 </script>
               </div>
+              <div class="col-lg-4">
+                <select class="form-control" name="banco_id">
+                  <?php foreach ($bancos as $key => $b): ?>
+                  <option value="<?php echo $b->id ?>"><?php echo $b->banco ?> - <?php echo $b->numero ?></option>
+                  <?php endforeach ?>
+                </select>
+              </div>
             </div>
           </div>
           <br>
@@ -109,10 +116,12 @@
   <div class="modal-body">
     Usted tiene de saldo positivo <label class="text-success"><?php echo $saldo->monto_positivo ?></label>, quiere pagar los servicios con dicho saldo?
   </div>
-  <form id="formSaldoPositivo" action="<?php echo baseUrlRole() ?>ResidentesPagos/total" method="POST">
+  <form id="formSaldoPositivo" action="<?php echo baseUrlRole() ?>ResidentesPagos/pago_plus" method="POST">
     <?php echo Token::field() ?>
+    <?php $servicios_ids = ArrSendUrl($checkboxvar) ?>
+    <input type="hidden" name="servicios" value="<?php echo $servicios_ids ?>">
+    <input type="hidden" name="monto_total" value="<?php echo $total ?>">
   </form>
-
   <div class="modal-footer">
     <button id="pagaPlus" type="button" class="btn btn-primary">Si</button>
     <!--                 <button type="button" class="btn btn-default modalClick" data-toggle="modal" data-target="#myModal2">

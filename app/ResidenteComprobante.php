@@ -1,5 +1,6 @@
 <?php 
 namespace App;
+use App\CuentaBanco;
 use App\ResidenteComprobanteImagen;
 use \Illuminate\Database\Eloquent\Model;
  
@@ -16,6 +17,11 @@ class ResidenteComprobante extends Model {
 	public function residente()
 	{
 	    return $this->belongsTo(Residente::class, 'residentes_id', 'id')->orderBy('id', 'desc');
+	}
+
+	public function banco()
+	{
+	    return $this->belongsTo(CuentaBanco::class, 'cuentas_bancos_id', 'id')->orderBy('id', 'desc');
 	}
 }
 

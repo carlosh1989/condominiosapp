@@ -22,22 +22,33 @@
             <?php endforeach ?>
             <div class="panel panel-body">
               <div class="row">
-                <div class="col-lg-6">
-                  <b class="text-primary">Deposito/Transferencia</b>
-                  <br>
-                  <b style="color: #444;">Número de referencia: </b><label style="color: #444;"><?php echo $pago->comprobante->numero_referencia ?></label>
-                  <br>
-                  <?php if ($pago->comprobante->monto_comprobante > 0): ?>
-                  <b style="color: #444;">Número de referencia: </b><label style="color: #444;"><?php echo $pago->comprobante->numero_referencia ?></label>
-                  <?php else: ?>
-                  <b style="color: #444;">Monto comprobante: </b><label style="color: #444;">Aun por confirmar.</label>
-                  <?php endif ?>
-                  <br>
-                  <b style="color: #444;">Fecha: </b><label style="color: #444;"><?php echo $pago->comprobante->fecha ?></label>
-                </div>
-                <div class="col-lg-6">
-                   <a style="cursor: pointer;" href="<?php echo $pago->comprobante->imagen->imagen_original ?>" target="_blank">  <img class="img-responsive" src="<?php echo $pago->comprobante->imagen->imagen_grande ?>"></a>
-                
+                <div class="col-lg-12">
+                  <div class="col-lg-6">
+                    <b class="text-primary">Cuenta de Banco</b>
+                    <br>
+                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->banco ?></label>
+                    <br>
+                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->tipo ?></label>
+                    <br>
+                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->numero ?></label>
+                    <br>
+                    <b style="color: #444;">Banco: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->nombre ?></label>
+                    <br>
+                    <b style="color: #444;">Email: </b><label style="color: #444;"><?php echo $pago->comprobante->banco->email ?></label>
+                  </div>
+                  <div class="col-lg-6">
+                    <b class="text-primary">Deposito/Transferencia</b>
+                    <br>
+                    <b style="color: #444;">Número de referencia: </b><label style="color: #444;"><?php echo $pago->comprobante->numero_referencia ?></label>
+                    <br>
+                    <?php if ($pago->comprobante->monto_comprobante > 0): ?>
+                    <b style="color: #444;">Número de referencia: </b><label style="color: #444;"><?php echo $pago->comprobante->numero_referencia ?></label>
+                    <?php else: ?>
+                    <b style="color: #444;">Monto comprobante: </b><label style="color: #444;">Aun por confirmar.</label>
+                    <?php endif ?>
+                    <br>
+                    <b style="color: #444;">Fecha: </b><label style="color: #444;"><?php echo $pago->comprobante->fecha ?></label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -56,6 +67,9 @@
                       <li style="color:#444;list-style:none;"><b>TOTAL: <?php echo $pago->comprobante->monto_total ?></b></li>
                     </ul>
                   </div>
+                  <div class="col-lg-6">
+                    <a style="cursor: pointer;" href="<?php echo $pago->comprobante->imagen->imagen_original ?>" target="_blank">  <img class="img-responsive" src="<?php echo $pago->comprobante->imagen->imagen_grande ?>"></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -63,6 +77,7 @@
           <div class="modal-footer panel-body">
             <form action="<?php echo baseUrlRole() ?>Pagos/aprobar" method="POST">
               <?php echo Token::field() ?>
+              <input type="hidden" name="comprobante_id" value="<?php echo $pago->comprobante->id ?>">
               <div class="row">
                 <div class="col-lg-6">
                   <input class="form-control" type="text" name="monto_comprobante" placeholder="Monto Comprobante" required>
