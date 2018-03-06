@@ -103,7 +103,11 @@
             </td>
             <td class="text-uppercase"><?php echo $u->monto_total ?></td>
             <td style="text-align: center;font-size: 0.8em;">
-            <a class="btn btn-default fa fa-print fa-2x" href="<?php echo baseUrlRole() ?>ResidentesPagos/comprobantePDF"></a>
+            <?php if ($u->estatus == 1): ?>
+              <a class="btn btn-default fa fa-print fa-2x" href="<?php echo baseUrlRole() ?>ResidentesPagos/comprobantePDF"></a>
+            <?php else: ?>
+              
+            <?php endif ?>
             </td>
             <td style="text-align: center;" class="text-uppercase">
               <?php if ($u->estatus === 2): ?>

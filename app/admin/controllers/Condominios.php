@@ -109,4 +109,9 @@ class Condominios
     {
 
     }
+
+    public function nueva()
+    {
+        echo "hola mundo";
+    }
 }
