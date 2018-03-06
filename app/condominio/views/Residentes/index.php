@@ -17,7 +17,7 @@
         <tbody>
           <?php foreach ($residentes as $key => $u): ?>
           <tr>
-            <td class="text-uppercase"><?php echo strtolower($u->imagen->imagen_original)?></td>
+            <td class="text-uppercase"><?php echo $u->id?></td>
             <td class="text-uppercase"><?php echo $u->nombre ?></td>
             <td class="text-uppercase"><?php echo $u->num_casa ?></td>
             <td style="text-align: center;" class="text-uppercase">
