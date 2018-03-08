@@ -114,7 +114,12 @@
     <h5 class="modal-title" id="myModalLabel">Saldo positivo</h5>
   </div>
   <div class="modal-body">
-    Usted tiene de saldo positivo <label class="text-success"><?php echo $saldo->monto_positivo ?></label>, quiere pagar los servicios con dicho saldo?
+  <?php if ($saldo): ?>
+        Usted tiene de saldo positivo <label class="text-success"><?php echo $saldo->monto_positivo ?></label>, quiere pagar los servicios con dicho saldo?
+  <?php else: ?>
+    
+  <?php endif ?>
+
   </div>
   <form id="formSaldoPositivo" action="<?php echo baseUrlRole() ?>ResidentesPagos/pago_plus" method="POST">
     <?php echo Token::field() ?>
@@ -146,7 +151,9 @@ $('#myModal').modal('hide')
 $( "#pagaPlus" ).click(function() {
 document.getElementById("formSaldoPositivo").submit();
 });
-<?php if ($saldo->monto_positivo > $total): ?>
+
+<?php if ($saldo): ?>
+  <?php if ($saldo->monto_positivo > $total): ?>
 $( document ).ready(function() {
 $('#pregunta').modal('show')
 $('#imagenSubida').addClass('panel panel-default');
@@ -155,6 +162,12 @@ $('#imagenSubidaDiv').addClass('animated bounceInDown');
 });
 <?php else: ?>
 <?php endif ?>
+<?php else: ?>
+  
+<?php endif ?>
+
+
+
 $( "#deposito" ).click(function() {
 document.getElementById("formDeposito").submit();
 });
