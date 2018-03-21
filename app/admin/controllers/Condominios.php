@@ -3,6 +3,7 @@ namespace App\admin\controllers;
 
 use App\Condominio;
 use App\CondominioImagen;
+use App\Servicio;
 use App\Usuario;
 use System\tools\rounting\Redirect;
 
@@ -60,6 +61,54 @@ class Condominios
         $condominio->cancha = $cancha;
         $condominio->estacionamiento = $estacionamiento;
         $condominio->save();
+
+        if(!isset($gym))
+        {
+            $gym=0;
+        }
+        else
+        {
+            $servicio = new Servicio;
+            $servicio->condominios_id = $condominio->id;
+            $servicio->servicio = 'gym';
+            $servicio->save();
+        }
+
+        if(!isset($piscina))
+        {
+            $piscina=0;
+        }
+        else
+        {
+            $servicio = new Servicio;
+            $servicio->condominios_id = $condominio->id;
+            $servicio->servicio = 'piscina';
+            $servicio->save();
+        }
+
+        if(!isset($estacionamiento))
+        {
+            $estacionamiento=0;
+        }
+        else
+        {
+            $servicio = new Servicio;
+            $servicio->condominios_id = $condominio->id;
+            $servicio->servicio = 'estacionamiento';
+            $servicio->save();
+        }
+
+        if(!isset($cancha))
+        {
+            $cancha=0;
+        }
+        else
+        {
+            $servicio = new Servicio;
+            $servicio->condominios_id = $condominio->id;
+            $servicio->servicio = 'cancha';
+            $servicio->save();
+        }
 
         $usuario->condominios_id = $condominio->id;
         $usuario->save();

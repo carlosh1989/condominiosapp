@@ -18,6 +18,10 @@
         </div>
       </div>
       <br>
+      <style type="text/css">
+        .hide-checkbox { display: none }        /* This will not work! */
+input.hide-checkbox { display: none }   /* But this will. */ 
+      </style>
       <form action="<?php echo baseUrlRole() ?>ResidentesPagos/total" method="POST">
         <?php echo Token::field() ?>
         <?php $monto = 0; ?>
@@ -31,6 +35,7 @@
             <span class="badge">ID: <?php echo $u->cobro->servicio->id ?> | FECHA:<?php echo $u->cobro->fecha_limite ?></span>
             <b>
             <?php echo ucfirst($u->cobro->servicio->servicio) ?>
+             <input type="checkbox" name="checkboxvar[]" value="<?php echo $u->id ?>" class="hide-checkbox" id="checkbox" checked="checked"/>
             </b>
           </li>
           <?php endforeach ?>
