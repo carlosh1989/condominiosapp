@@ -233,9 +233,9 @@
 
         </style>
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="<?php echo baseUrl ?>assets/css/materialize.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" href="<?php echo baseUrl ?>assets/css/animate.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="<?php echo baseUrl ?>assets/bower/lightbox2/dist/css/lightbox.min.css">
@@ -244,8 +244,8 @@
     </head>
     <body>
         <!-- Compiled and minified JavaScript -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="<?php echo baseUrl ?>assets/js/jquery.3.js"></script>
+        <script src="<?php echo baseUrl ?>assets/js/materialize.js"></script>
         <script src="<?php echo baseUrl ?>assets/bower/lightbox2/dist/js/lightbox.min.js"></script>
         <script type="text/javascript" src="<?php echo baseUrl ?>node_modules/blazy/blazy.min.js"></script>
         <div class="navbarFixed">

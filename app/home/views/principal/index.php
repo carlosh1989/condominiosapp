@@ -95,19 +95,19 @@
     </style>
     <div class="slider">
       <ul class="slides">
-        <li><img src="http://www.urbanova.bo/wp-content/uploads/2017/09/diap_alassio2G.jpg"/>
+        <li><img src="http://res.cloudinary.com/tuconsultaenlinea/image/upload/q_66/v1521663983/diap_alassio2G_ajttlm.jpg"/>
           <div class="caption center-align">
             <h4><a href="#" style="padding:5px;" class="white tituloBanner">PAGOS</a></h4>
             <h5 class="light white-text text-lighten-3 white-text"> <a href="#" style="padding:5px;" class="green white-text">Nunca fue tan facil ordenar los pagos</a></h5>
           </div>
         </li>
-        <li><img src="http://www.torresaltima.com/img/Banner_home_06Final.png"/>
+        <li><img src="http://res.cloudinary.com/tuconsultaenlinea/image/upload/q_70/v1521664056/Banner_home_06Final_rhajib.jpg"/>
           <div class="caption center-align">
             <h4><a href="#" style="padding:5px;" class="white tituloBanner">HISTORIAL</a></h4>
             <h5 class="light white-text text-lighten-3 white-text"> <a href="#" style="padding:5px;" class="green white-text">Llevar un control e historial de pagos.</a></h5>
           </div>
         </li>
-        <li><img src="http://www.urbanova.bo/wp-content/uploads/2017/09/diap_alassio4G.jpg"/>
+        <li><img src="http://res.cloudinary.com/tuconsultaenlinea/image/upload/q_66/v1521664154/diap_alassio4G_apjmfx.jpg"/>
           <div class="caption center-align">
             <h4><a href="#" style="padding:5px;" class="white tituloBanner">NOTIFICACIONES</a></h4>
             <h5 class="light white-text text-lighten-3 white-text"> <a href="#" style="padding:5px;" class="green white-text">Informaciones y noticias del condominio.</a></h5>
