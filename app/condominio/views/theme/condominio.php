@@ -108,13 +108,12 @@
                                             <li><a href="<?php echo baseUrl ?>auth/login/logout"><i class="fa fa-power-off"></i> Salir</a></li>
                                         </ul>
                                     </li>
-                                </ul>
-<!--                                 <ul class="nav navbar-nav">
+                               <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Residentes"><i class="fa fa-users"></i> RESIDENTES</a></li>
-                                </ul> -->
-                                <ul class="nav navbar-nav">
+                                </ul> 
+                            <!--    <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Servicios"><i class="fa fa-file-o"></i> SERVICIOS</a></li>
-                                </ul>
+                                </ul> -->
                                 <ul class="nav navbar-nav">
                                     <li class=""><a href="<?php echo baseUrlRole() ?>Cobros"><i class="fa fa-credit-card"></i> COBROS</a></li>
                                 </ul>

@@ -8,7 +8,7 @@
 <br>
 <label><b>Factura N°: </b> <?php echo $pago->comprobante->id ?></label>
 <br>
-<label>Fecha de expedición: <?php echo $pago->comprobante->fecha ?></label>
+<label><b>Fecha de expedición:</b> <?php echo $pago->comprobante->fecha ?></label>
 <?php endforeach ?>
 <div class="panel panel-body">
   <b class="text-primary">Estatus:</b>
