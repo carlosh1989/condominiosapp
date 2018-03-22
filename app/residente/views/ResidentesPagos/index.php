@@ -32,7 +32,9 @@ input.hide-checkbox { display: none }   /* But this will. */
         <ul class="list-group">
           <?php foreach ($pagos as $key => $u): ?>
           <li class="list-group-item">
-            <span class="badge">ID: <?php echo $u->cobro->servicio->id ?> | FECHA:<?php echo $u->cobro->fecha_limite ?></span>
+            <span class="badge">MONTO:<?php echo $u->cobro->monto ?></span>
+            <span class="badge">FECHA:<?php echo $u->cobro->fecha_limite ?></span>
+
             <b>
             <?php echo ucfirst($u->cobro->servicio->servicio) ?>
              <input type="checkbox" name="checkboxvar[]" value="<?php echo $u->id ?>" class="hide-checkbox" id="checkbox" checked="checked"/>

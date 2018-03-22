@@ -62,6 +62,11 @@ class Condominios
         $condominio->estacionamiento = $estacionamiento;
         $condominio->save();
 
+        $servicio = new Servicio;
+        $servicio->condominios_id = $condominio->id;
+        $servicio->servicio = 'mensualidad';
+        $servicio->save();
+
         if(!isset($gym))
         {
             $gym=0;

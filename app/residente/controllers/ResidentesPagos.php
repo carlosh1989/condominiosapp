@@ -197,7 +197,7 @@ class ResidentesPagos
     {
         extract($_GET);
         ob_start();
-        $u = ResidenteComprobante::find(17);
+        $u = ResidenteComprobante::find($id_comprobante);
         include('app/residente/views/ResidentesPagos/comprobantePDF.php');
         $dompdf = new Dompdf(array('enable_remote' => true));
         $baseUrl = baseUrl;
